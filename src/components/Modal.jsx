@@ -21,7 +21,7 @@ export function Modal() {
       className="bg-modal-bg w-full h-full absolute top-0 left-0"
       style={{ display: openModal ? "block" : "none" }}
     >
-      <div className="bg-white w-1/4  h-72 rounded-lg my-60 mx-auto p-6 flex flex-col">
+      <div className="bg-white w-full lg:w-1/4  h-72 rounded-lg my-60 mx-auto p-6 flex flex-col">
         <h2 className="text-xl font-bold text-center">Purchase Successful!</h2>
         <div className="mx-auto my-4">
           <OrderConfirmationIcon />
