@@ -1,7 +1,7 @@
 export default function AmazonLogo() {
   return (
     <svg
-      className="w-24 px-0 py-0"
+      className="w-20 md:w-24 px-0 py-0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="190.05 328.69 640.05 192.91"
     >

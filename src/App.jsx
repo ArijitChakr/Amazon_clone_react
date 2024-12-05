@@ -10,15 +10,17 @@ import { Modal } from "./components/Modal";
 
 function App() {
   return (
-    <div className=" bg-body-background">
+    <div className=" bg-body-background w-screen min-h-screen flex flex-col">
       <RecoilRoot>
         <BrowserRouter>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/products" element={<ProductList />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/products" element={<ProductList />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+          </div>
           <Footer />
           <Modal />
         </BrowserRouter>

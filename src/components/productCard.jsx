@@ -6,7 +6,7 @@ import { gridContents, images } from "../assets/store/homepageContent";
 
 export default function ProductCardContainer() {
   return (
-    <div className="w-5/6 px-6 backdrop-blur-2xl m-auto  -translate-y-72 grid grid-cols-4 gap-5">
+    <div className="w-full lg:w-[82.7%]  lg:px-6 backdrop-blur-2xl  xl:mt-96 mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-1 md:gap-5">
       {gridContents.map((item, index) => (
         <ProductCard
           key={index}
@@ -23,7 +23,7 @@ export default function ProductCardContainer() {
 
 function ProductCard({ image, subHeading, heading }) {
   return (
-    <div className="bg-white px-4 py-6 flex flex-col justify-between">
+    <div className="bg-white px-2 py-3 md:px-4 md:py-6 flex flex-col justify-between">
       <h2 className="m-1 text-left font-bold text-xl">{heading}</h2>
       <div className="grid grid-cols-2 gap-1">
         {Array(4)
@@ -35,7 +35,10 @@ function ProductCard({ image, subHeading, heading }) {
             </Link>
           ))}
       </div>
-      <Link to="/products" className="mt-8 l-1 text-sm text-blue-700">
+      <Link
+        to="/products"
+        className="mt-8 l-1 text-lg md:text-sm text-blue-700"
+      >
         Explore all
       </Link>
     </div>
@@ -44,7 +47,7 @@ function ProductCard({ image, subHeading, heading }) {
 
 function ProductSlider() {
   return (
-    <div className="h-72 bg-white col-span-4 p-6 flex flex-col relative">
+    <div className="h-72 bg-white col-span-1 md:col-span-2  xl:col-span-4 p-6 hidden md:flex flex-col relative">
       <h2 className="text-xl font-bold">
         Up to 60% off | Unique products from stores nearby
         <span className="ml-2 text-sm font-normal text-blue-700">

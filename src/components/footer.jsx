@@ -2,8 +2,8 @@ import AmazonLogo from "../assets/logo";
 
 export function Footer() {
   return (
-    <div className="bg-footer-background  w-full ">
-      <div className="flex justify-center border-b border-navbar-bglight">
+    <div className="bg-footer-background  w-full mt-10">
+      <div className=" hidden md:flex justify-center border-b border-navbar-bglight">
         {Array(4)
           .fill(0)
           .map((x, i) => (
@@ -13,7 +13,7 @@ export function Footer() {
       <div className="flex flex-col justify-center items-center p-10">
         <AmazonLogo />
       </div>
-      <div className="bg-footer-darkbg w-full flex justify-center items-center py-10 text-sm text-navbar-txt">
+      <div className="bg-footer-darkbg w-full flex justify-center items-center py-10 text-xs md:text-sm text-navbar-txt">
         <div>
           <span className="mx-3">Conditions of Use & Sale</span>
           <span className="mx-3">Privacy Notice</span>

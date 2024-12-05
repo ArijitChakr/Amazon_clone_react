@@ -9,9 +9,13 @@ export function Cart() {
   const items = useRecoilValue(cartItems);
 
   return (
-    <div className={`${items.length <= 1 ? "h-full" : "h-auto"} w-4/5 mx-auto`}>
-      <div className="grid w-full mx-auto my-8 grid grid-cols-4 gap-6">
-        <div className="bg-white col-span-3  p-4">
+    <div
+      className={`${
+        items.length <= 1 ? "h-full" : "h-auto"
+      } w-full lg:w-4/5 mx-0 lg:mx-auto`}
+    >
+      <div className="grid w-full mx-0 lg:mx-auto my-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="bg-white col-span-1  lg:col-span-3  p-4">
           <h2 className="text-3xl pb-4 border-b border-slate-200">
             Shopping Cart
           </h2>
@@ -58,11 +62,13 @@ function CartItems({ props }) {
 
   return (
     <div className="grid grid-cols-7 gap-3 py-10 border-b border-slate-200">
-      <div className="col-span-1">
+      <div className="col-span-2 lg:col-span-1">
         <img src={props.imageURL} className="w-full h-full" />
       </div>
-      <div className="col-span-5">
-        <h3 className="text-lg font-semibold">{props.name}</h3>
+      <div className="col-span-5 ">
+        <h3 className="text-md lg:text-lg font-base lg:font-semibold">
+          {props.name}
+        </h3>
         <p className="text-red-500">In stock</p>
         <div className="flex mt-4">
           <button
@@ -80,7 +86,7 @@ function CartItems({ props }) {
           </button>
         </div>
       </div>
-      <div className="col-span-1 text-right px-3 font-bold text-lg">
+      <div className=" col-span-3 lg:col-span-1 lg:text-right px-1 lg:px-3 font-bold text-lg">
         ₹{" "}
         {(props.price * props.quantity).toLocaleString("en-IN", {
           minimumFractionDigits: 2,

@@ -10,12 +10,12 @@ export function Navbar() {
   const { totalItems } = useRecoilValue(totalCartItems);
 
   return (
-    <div className="bg-navbar-background px-10 py-3 flex justify-between">
-      <Link to="/" className="flex justify-center pt-3 text-nowrap">
+    <div className="bg-navbar-background px-2 md:px-10 py-3 flex justify-between ">
+      <Link to="/" className="flex justify-center pt-3 pl-2 text-nowrap">
         <AmazonLogo />
-        <span className="text-navbar-txt ">.in</span>
+        <span className="text-navbar-txt text-sm md:text-base">.in</span>
       </Link>
-      <div className="flex ml-4 mr-10 pt-1 text-nowrap">
+      <div className="hidden md:flex ml-4 mr-10 pt-1 text-nowrap">
         <div className="pt-2">
           <LocationSVG />
         </div>
@@ -26,7 +26,7 @@ export function Navbar() {
           <span className="text-white font-bold text-sm ">Update location</span>
         </div>
       </div>
-      <div className="flex bg-navbar-search w-full rounded">
+      <div className="hidden lg:flex bg-navbar-search w-full rounded ">
         <div className="bg-navbar-txt text-black flex justify-center items-center w-12 pr-px rounded-l">
           All
         </div>
@@ -39,12 +39,12 @@ export function Navbar() {
           <SearchIcon />
         </div>
       </div>
-      <div className="text-navbar-txt leading-3 ml-20 pt-1 text-nowrap">
+      <div className="text-navbar-txt leading-3 ml-20 pt-1 text-nowrap hidden md:block">
         <p className="text-xs">Hello, User</p>
         <p className="text-sm font-bold">Account & Lists</p>
       </div>
 
-      <div className="text-navbar-txt leading-3 ml-8 pt-1 text-nowrap">
+      <div className="text-navbar-txt leading-3 pt-1 ml-20 text-nowrap hidden md:block">
         <p className="text-xs">Returns</p>
         <p className="text-sm font-bold">& Orders</p>
       </div>

@@ -6,7 +6,7 @@ import { sliderImages } from "../assets/store/homepageContent";
 
 export function Carousel() {
   return (
-    <div className="w-5/6 m-auto">
+    <div className="w-full lg:w-10/12 block xl:absolute xl:top-16 mx-auto lg:my-2 xl:my-0 xl:left-32 2xl:left-40">
       <SliderContent slides={sliderImages} />
     </div>
   );
@@ -32,7 +32,7 @@ function SliderContent({ slides }) {
   return (
     <div className="overflow-hidden relative">
       <div
-        className="flex transition ease-in-out duration-400"
+        className="flex transition ease-in-out duration-400 mt-px"
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {slides.map((s, i) => (
@@ -42,14 +42,14 @@ function SliderContent({ slides }) {
       <div className="absolute top-0 h-full w-full justify-between items-start flex">
         <div
           onClick={prevSlide}
-          className="h-80 rounded flex justify-center items-center p-4"
+          className="hidden lg:flex h-80 rounded  justify-center items-center p-4"
         >
           <BackwordArrowIcon />
         </div>
         <Link to="/products" className="w-full h-full"></Link>
         <div
           onClick={nextSlide}
-          className="h-80 rounded flex justify-center items-center p-4"
+          className="hidden lg:flex h-80 rounded  justify-center items-center p-4"
         >
           <ForwardArrowIcon />
         </div>
